@@ -9,17 +9,20 @@ This is a console program that generate a hash value (md5 and sha256 algoritms) 
 2. Write in the command line 'bash script.sh';
 or
 2. Write in the command line these commands:
-      javac -cp lib/commons-codec-1.8.jar:lib/org.apache.commons.io.jar *.java
 
-      jar cvfm myHashFunk.jar Manifest.md *.class
+   javac -cp lib/commons-codec-1.8.jar:lib/org.apache.commons.io.jar *.java
+
+   jar cvfm myHashFunk.jar Manifest.md *.class
 -
 # How to run
 -
 If you want to use interactive mode then  write
-        'java -jar myHashFunk -i'
+
+  'java -jar myHashFunk -i'
 
 If you want to use single mode then write
-        'java -jar myHashFunk -md5(or -sha256)'
+
+   'java -jar myHashFunk -md5(or -sha256)'
 
 Optionally, you can immediately enter the file address with '-f "file address"'
 
