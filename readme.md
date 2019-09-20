@@ -1,4 +1,5 @@
-# Java Lab_1# Java Lab_1
+# Java Lab_1
+### Б17-505 Евсеенков Д.А.
 ---
 This is a console program that generate a hash value (md5 and sha256 algoritms) for the text files. The user can sequentially calculate the hash of several files or calculate once for a single file
 ---
