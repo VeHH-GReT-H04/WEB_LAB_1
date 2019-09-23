@@ -16,14 +16,21 @@ class Single
         int exit = 0;
         if (file.isFile()) exit = 1;    //проверка на то, что изначально в консоль введен верный путь
         Scanner in = new Scanner (System.in);
-        while (exit != 1)
+        //while (exit != 1)
+        if (exit == 0)
         {
-            System.out.println("Enter the correct path to the file\n");
-            path = in.nextLine();
-            file = new File(path);
-            if (file.isFile()) exit =1;
+            //System.out.println("Enter the correct path to the file\n");
+            //path = in.nextLine();
+            //file = new File(path);
+            //if (file.isFile()) exit =1;
+            System.out.println(path); System.out.println(" - Incorret file path\n");
         }
-        SingleHash (mode, file);
+        if (exit == 1)
+        {
+            System.out.println(path); System.out.println(" - Correct file path");
+            file = new File(path);
+            SingleHash (mode, file);
+        }
     }
 
     public void SingleHash (String mode, File file)
@@ -37,12 +44,12 @@ class Single
         if (mode.equals("-md5"))
         {
             String hash = DigestUtils.md5Hex(content);
-            System.out.println("MD5: " + hash);
+            System.out.println("MD5: " + hash + "\n");
         }
         if (mode.equals ("-sha256"))
         {
             String hash = DigestUtils.shaHex(content);
-            System.out.println("SHA256: " + hash);
+            System.out.println("SHA256: " + hash + "\n");
         }
     }
 
